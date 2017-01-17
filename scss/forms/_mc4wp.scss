@@ -1,0 +1,25 @@
+
+
+.mc4wp{
+ 
+    &-alert{
+        @include center-block();
+        @extend .notice;
+        @extend .bg-primary;
+        font-weight: bold;
+        max-width: 600px;
+    }
+    
+    &-success{
+        @extend .bg-success;
+    }
+    
+    &-error{
+        @extend .bg-danger;
+    }
+    
+    &-notice{
+        @extend .bg-warning;
+    }
+    
+}

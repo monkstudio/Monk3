@@ -1,0 +1,31 @@
+$unordered-list-style: circle !default;
+$ordered-list-style: decimal !default; 
+
+ol {
+	list-style: $ordered-list-style;
+}
+
+ul {
+    list-style: $unordered-list-style;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+// Definition Lists
+dl {
+    @include clearfix();
+}    
+
+dt {
+	font-weight: bold;
+    float: left;
+    margin-right: $grid-gutter-width/4;
+    clear: left;
+}
+
+dd {
+    display: table;
+}

@@ -1,0 +1,53 @@
+
+#masthead {
+    
+    clear: both;
+    width: 100%;
+    position: absolute;
+    z-index: $zindex-navbar;
+    top: 0;
+    left: 0;
+    padding: $line-height-computed 0;
+
+    // Background styles
+    //background: transparentize($body-bg, .4);
+    //background-image: linear-gradient(to bottom, transparentize($body-bg, .25),transparentize($body-bg, 1));
+    
+    .wrapper {
+
+        .logo {
+            margin: $navbar-padding-vertical 0;
+        }
+        
+        .hamburger {
+            
+            position: absolute;
+            right: $grid-gutter-width/2;
+            z-index: $zindex-navbar + 1;  
+            
+            @media (min-width:$grid-float-breakpoint){
+                display: none;
+            }
+            
+        }
+        
+        > nav {
+            margin: 0;
+
+            @media (min-width:$grid-float-breakpoint){
+                float: right;
+            }
+                            
+            @media (max-width:$grid-float-breakpoint-max) {
+                text-align: center;
+            }
+                
+        }
+        
+    }
+    
+    
+    
+}
+
+

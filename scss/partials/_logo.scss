@@ -1,0 +1,87 @@
+
+$logo_path      : 'images/logo.png' !default;
+$logo_path_alt  : $logo_path !default;
+$logo_fb        : false !default;
+$logo_fb_alt    : false !default;
+$logo_width     : (100%/12) !default;
+$logo_height    : $logo_width/2 !default;
+$logo_selector  : '.logo' !default;
+
+%logo {
+    
+    display: inline-block;
+    
+    // Hide inner text
+    @include text-hide;
+
+    margin: 0;
+    padding: 0;
+    
+    width: $logo_width + px;
+    height: 100%;
+    
+    max-width: 100%;
+    
+    background: {
+        @if $logo_fb {
+            image : url(#{$logo_fb});
+        }
+        image    : url(#{$logo_path});
+        repeat   : no-repeat;
+        size     : 100% 100%;
+        position : 0 0;
+    }
+    
+    position: relative;
+    //top: -$font-size-base;
+    
+    .inverse &,
+    &.inverse{
+        @include inverse;
+        
+        background: {
+            @if $logo_fb_alt {
+                image : url(#{$logo_fb_alt});
+            }
+            image: $logo_path_alt;
+        }
+        
+    }
+    
+    &:before{
+        content: "";
+        display: block;
+        width: 100%;
+        line-height: 0;
+        height: 0;
+        padding-top: 100% * ($logo_height/$logo_width);
+    } 
+    
+    > *{
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    &:hover,
+    &:focus,
+    a:hover,
+    a:focus{
+        border: none;
+        //text-decoration: none;
+        outline: none;
+         -webkit-text-fill-color: transparent;
+    }
+    
+}
+
+#{$logo_selector}{
+    
+    @extend %logo;
+    
+}

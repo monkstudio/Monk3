@@ -1,0 +1,39 @@
+img {
+    
+	-ms-interpolation-mode: bicubic;
+
+    &.alignleft,
+    &.alignright{
+
+        @media (min-width:$screen-sm-min){
+            max-width: 50%;
+        }
+
+    }
+
+
+}
+
+
+figure {
+	margin: 0;
+}
+
+audio,
+canvas {
+	display: inline-block;
+}
+
+embed,
+iframe,
+object,
+video {
+	margin-bottom: $line-height-computed;
+	max-width: 100%;
+	vertical-align: middle;
+    
+    p > &{
+        margin-bottom: 0;
+    }
+    
+}

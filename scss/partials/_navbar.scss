@@ -1,0 +1,26 @@
+//@import "navbars/offcanvas";
+
+
+.navbar{
+    
+    &-collapse{
+        padding: 0;
+        overflow-x: hidden;
+
+    }
+        
+    &-nav {
+        
+        > li {
+            margin-bottom: 0;
+            
+            > a {
+                white-space: nowrap;
+            }
+            
+        }
+        
+    }
+        
+    
+}

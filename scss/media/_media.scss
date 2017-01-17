@@ -1,0 +1,43 @@
+// WP Embedded playlists
+.wp-playlist{
+    
+    .wp-playlist {
+        padding-bottom: 0;
+    }
+    
+    .wp-playlist-tracks {
+        margin-top: 0;
+    }
+    
+    &-item {
+        
+        .wp-playlist-caption {
+            border-bottom: 0;
+        }
+        
+        .wp-playlist-item-length {
+            
+        }
+        
+    }
+    
+}
+
+
+// Image captions
+.wp-caption {
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0;
+}
+
+.wp-caption-text {
+    color: $thumbnail-caption-color;
+}
+
+
+// Imports
+@import "galleries";

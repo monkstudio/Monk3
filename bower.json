@@ -1,0 +1,42 @@
+{
+  "name": "monk",
+  "version": "3.0.0",
+  "main": [
+    "js/lib/email.js",
+    "js/modernizr.js",
+    "style.css",
+    "js/script.js"
+  ],
+  "authors": [
+    "Eddy Pytlowany <eddy@monk.com.au>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "<2"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "*",
+    "css-hamburgers": "*",
+    "slick-carousel": "*",
+    "bourbon" : "*"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "./assets/javascripts/bootstrap/transition.js",
+        "./assets/javascripts/bootstrap/dropdown.js"
+      ]
+    }
+  },
+  "devserver": {
+        "livereload" : true
+  }
+}

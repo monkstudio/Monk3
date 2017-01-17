@@ -1,0 +1,60 @@
+input,
+select,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+    
+    // Removing the inner shadow on iOS inputs
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); 
+    
+    &::-moz-focus-inner{
+        border: 0;
+        padding: 0; 
+    }
+    
+    
+    &.full-width{
+        min-width: 100%;
+        width: 100%;
+    }
+    
+}
+
+select{
+    -webkit-appearance: none; 
+}
+
+input[type="password"] {
+    letter-spacing: 0.3em;
+}
+
+input[type="search"] {
+    
+    -moz-appearance:    textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration{
+        -webkit-appearance: none;
+    }
+    
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+
+
+}
+    
+
+//@import "mc4wp";
+//@import "gforms";

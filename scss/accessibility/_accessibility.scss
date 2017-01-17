@@ -1,0 +1,17 @@
+/**
+ * 7.0 Accessibility
+ */
+
+/* Text meant only for screen readers */
+.says,
+.screen-reader-text,
+.screen-reader-response{
+	@extend .sr-only;
+    z-index: 100000; /* Above WP toolbar */
+}
+
+/* must have higher specificity than alternative color schemes inline styles */
+.skip-link {
+    @extend .sr-only;
+    @extend .sr-only-focusable;    
+}

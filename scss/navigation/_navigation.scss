@@ -1,0 +1,93 @@
+
+// Links
+a{
+    
+    transition: $transition;
+    
+    &:hover,
+    &:focus{
+        //outline: none;
+    }
+    
+    &:visited{
+        
+    }
+    
+}
+
+// Pagination
+nav.pagination {
+    
+    display: block;
+    border-radius: 0;
+    text-align: center;
+    margin: $line-height-computed auto;
+    
+    ul.page-numbers {
+        @extend .pagination;
+        
+        .current {
+            &,
+            &:hover,
+            &:focus {
+                z-index: 3;
+                color: $pagination-active-color;
+                background-color: $pagination-active-bg;
+                border-color: $pagination-active-border;
+                cursor: default;
+            }
+        }
+        
+        .dots {
+            &,
+            &:focus,
+            &:hover {
+                color: $pagination-disabled-color;
+                background-color: $pagination-disabled-bg;
+                border-color: $pagination-disabled-border;
+            }
+        }
+        
+    }
+    
+}
+
+
+// Buttons
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btn,
+.button {
+    
+    > i {
+        vertical-align: top;
+    }
+    
+    transition: $transition;
+    
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+    
+    &:visited {
+        
+    }
+    
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+           
+}
+
+.button{
+    @extend .btn;
+}
+
+
+@import "nav";
+@import "superfish";
+

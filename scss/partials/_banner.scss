@@ -1,0 +1,123 @@
+/*
+ *
+ * Notes: 
+ * By default no height must be assigned to the base banner, since it should be the content that defines the height.
+ * Exceptions can be extended to banner styles that may serve a specific context.
+ *
+ */
+
+// Default Vars
+$banner-padding-vertical   : 50 + $line-height-computed !default; // About double the size of carousel's dots plus the line height
+$banner-padding-horizontal : 0 !default;
+
+.banner {
+    
+    overflow: hidden;
+    position: relative;
+    
+    display: table;
+    table-layout: fixed;
+    
+    width: 100%;
+        
+    @include inverse;
+    
+    margin: 0; // By default this component shouldn't affect document flow as much as possible.
+    
+    padding: $banner-padding-vertical $banner-padding-horizontal;
+    
+    background: {
+        color: $gray-lighter;
+        size: cover;
+        position: center center;
+        repeat: no-repeat;
+    }
+
+    min-height: 300px;
+    
+    max-height: 100%;
+    max-height: 100vh;
+
+    // Preset layouts
+    article > &:first-child,
+    header  > &:first-child,
+    footer  > &:first-child{
+        height: 100vw * (9/16);
+
+        .paged,
+        .single {
+            max-height: 600px;
+        }
+        
+    }   
+    
+    & & {
+        height: 100%; // If embedded, try to match the height of the parent banner
+        display: table; // Force table in case a slider plugin tries to override it.
+    }
+        
+    // Signify a group of banners without inheritantly defining and styles for itself independant of context. 
+    &-group {
+
+        
+    }
+
+    // Support for nested banners as well as BS Carousel
+    & > &,
+    & > &-group,
+    .carousel {
+        
+        @include fit-container;
+        z-index: 0;
+
+        
+    }
+
+    & > &-group,
+    .carousel {
+
+        display: table-caption;
+
+    }
+    
+    
+    // Support for Slider.js
+    & > & {
+        
+        & ~ .banner {
+            display: none;
+        }
+        
+        &.active,
+        &.fade{
+            display: table;
+        }
+        
+    }
+
+    // Extend wrapper to wrap inner content.
+    .wrapper {
+        display: table-cell;
+        width: 100%;
+    }
+    
+    // Define different banner styles here //
+    &.center {
+        
+        .wrapper {
+            vertical-align: middle;
+            text-align: center;
+        }
+        
+    }
+
+    &.bottom {
+
+        .wrapper {
+            vertical-align: bottom;
+        }
+
+    }
+    
+    
+}

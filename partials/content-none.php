@@ -1,0 +1,1 @@
+<article id="no-articles" <?php post_class('article-main') ?> >        <div class="article-content" >        <p>            Sorry, no results found. Try again or <a href="<?php echo get_home_url('/') ?>" title="<?php esc_attr_e('Return Home', MONK_LANG) ?>" ><?php _e('return home', MONK_LANG) ?></a>.        </p>    </div>    </article><?php

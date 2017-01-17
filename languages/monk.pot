@@ -1,0 +1,20 @@
+# Copyright (C) 2015 EP Theme
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: EP Theme 1.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: classes/class-woothemes-sensei-lesson.php:2533
+msgid "Easy"
+msgstr "Basic Level"
+
+#: classes/class-woothemes-sensei-lesson.php:2534
+msgid "Standard"
+msgstr "Intermediate Level"
+
+#: classes/class-woothemes-sensei-lesson.php:2535
+msgid "Hard"
+msgstr "Masterclass Level"

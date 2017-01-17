@@ -1,0 +1,93 @@
+
+#page,
+.page {
+ 
+    &-header:first-child {
+        margin-top:( $line-height-computed * 2) + ($navbar-height * 2);
+    }
+    
+    &.modal-open {
+        padding-right: 0 !important; // Fix some modal weirdness
+    }
+    
+}
+
+main {
+    
+    //@include .container;
+    
+}
+
+section,
+.section {
+
+    margin: $line-height-computed auto;
+
+    //@include clearfix;
+
+    > .heading:first-child {
+
+        text-align: center;
+
+    }
+    
+}
+
+article,
+.article{
+    
+    &-list &{
+        
+        padding: $line-height-computed $grid-gutter-width/2 0;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        
+        > * {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        @media (min-width:$screen-sm-min){
+    
+            width: 50%;
+            
+        }
+        
+        @media (min-width:$screen-md-min){
+            
+            width: (100%/3);
+            
+        }
+        
+    }
+    
+    &-header {
+        
+        text-align: center;
+        
+        // Style the heading if it's the page's main title and there's no element preceeding the header
+        &:first-child > h1:first-child {
+            margin-top: $line-height-computed + ($navbar-height * 2);
+        }
+        
+        img {
+            @include center-block;
+        }
+        
+    }
+    
+    &-content {
+        
+        margin: $line-height-computed auto;
+        
+        @include clearfix;
+        
+    }
+    
+    &-footer {
+        
+    }
+    
+}
+

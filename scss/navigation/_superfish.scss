@@ -1,0 +1,24 @@
+
+
+.sf-js-enabled {
+    
+    &.sf-arrows {
+        // Make sure Superfish's dropdown arrow inheris BS' link color
+        > li > .sf-with-ul:after {
+            border-top-color: $link-color;
+            .sf-with-ul {
+                border-left-color: $link-color;
+            }
+        }
+    }
+
+    .sf-with-ul{
+
+        padding-right: $grid-gutter-width/2;
+
+        @media (min-width:$grid-float-breakpoint){
+            padding-right: $grid-gutter-width;
+        }
+    }
+    
+}

@@ -1,0 +1,18 @@
+@import "slick-slider";
+@import "logo";
+@import "navbar";
+@import "banner";
+
+
+/*==== Map ====*/
+.map {
+    
+    &-wrapper {
+        
+        padding-bottom: (9%/16) * 100;
+        max-height: 100vh;
+        min-height: 300px;
+        
+    }
+    
+}

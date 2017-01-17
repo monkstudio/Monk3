@@ -1,0 +1,245 @@
+
+
+// The class .gform isn't actually used by Gravity Forms but acts as a prefix for all it's parent elements. Thus serves here to simply enclose the css structure.
+.gform {
+
+    // The encapsulating wrapping div for all forms. So far I used it to target common elements that would be used form-wide such as buttons and input tags.
+    &_wrapper {
+  
+        margin-bottom: $line-height-computed;
+
+        // General class assigned to all button & input[type="submit"] tags in the form
+        .button {
+
+            @extend .btn;
+
+            &[type="submit"]{
+                @extend .btn-primary;
+            }
+
+        }
+
+        
+        // Target all typing input tags and extend Bootstrap's .form-control class to all of them. Also prevent browsers from overriding our styles by setting appearance to none.
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="range"],
+        input[type="date"],
+        input[type="month"],
+        input[type="week"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="color"],
+        textarea,
+        select {
+
+            @extend .form-control;
+            appearance: none;
+
+        }
+        
+    }
+
+    // On the off chance the form prints a ul list, target .gform_fields to make sure the default <ul> styles arn't applied.
+    &_fields {
+
+        padding: 0;
+        margin: $line-height-computed/2 0;
+        list-style: none;
+
+    }
+    
+    // The wrapping div for the form's title & description.
+    &_heading {
+        
+        margin-bottom: $line-height-computed;
+
+    }
+
+    // The forms title
+    &_title {
+
+    }
+    
+    // The forms description
+    &_description {
+
+    }
+    
+    // The wrapping div for the form's actual fields.
+    &_body {
+
+        margin-bottom: $line-height-computed;
+
+        .gsection{
+
+            &_title {
+                
+            }
+
+            &_description {
+                @extend .help-block;
+            }
+
+        }
+        
+        .gfield {
+            
+            &_label {
+                font-weight: bold;
+            }
+
+            &_required {
+
+                position: relative;
+                top: -2px;
+                right: -2px;
+                color: $brand-danger;
+
+            }
+            
+            &_error {
+                
+                .validation_message {
+                    @extend .alert-danger;
+                    
+                    &.instruction {
+                        @extend .alert-info;
+                    }
+                    
+                }
+                
+            }
+
+            &_html {
+
+            }
+
+            &_checkbox,
+            &_radio {
+
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                > li {
+
+                    //@extend .checkbox;
+                    padding-left: 0;
+                    margin-left: 0;
+
+                    label {
+
+                        margin-left: $grid-gutter-width/4;
+
+                    }
+                    
+                }
+
+            }
+            
+        }
+        
+        .ginput{
+            
+            &_container {
+    
+                margin-bottom: $line-height-computed/2;
+                
+            }
+            
+            &_complex {
+                
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                
+                @include clearfix;
+                
+                > span {
+                    
+                    display: table-cell;
+                    vertical-align: top;
+                    padding-right: $grid-gutter-width/4;
+                    width: 100%;
+
+                    &:last-of-type {
+                        padding-right: 0;
+                    }
+                    
+                }
+
+                > .ginput {
+                    
+                    &_full {
+                        display: block;
+                        width: 100%;
+                        padding-right: 0;
+                    }
+
+                    
+                    &_left {
+                        display: block;
+                        float: left;
+                        width: 50%;
+                    }
+
+                    &_right {
+
+                        display: block;
+                        float: right;
+                        width: 50%;
+
+                    }
+
+                }
+                
+            }
+            
+        }
+
+        .validation_message {
+
+            @extend .alert;
+            margin: 0;
+            
+        }
+        
+    }
+
+    &_page_footer {
+
+        background: $gray-lighter;
+
+        .button {
+            @extend .btn-link;
+        }
+
+        @include clearfix;
+
+    }
+
+    &_next_button {
+
+        float: right;
+
+    }
+
+    &_prev_button {
+
+        float: left;
+
+    }
+    
+    &_footer {
+
+    }
+
+    
+}
