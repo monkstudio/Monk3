@@ -48,6 +48,14 @@
 }
 
 
+@mixin transition($properties: 'all') {
+    
+    transition: $transition-func $transition-dur;
+    transition-property: $properties;
+    
+}
+
+
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
 	
     $src: local(quote($name));

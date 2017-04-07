@@ -47,7 +47,6 @@ function monk_setup(){
         'social'    => __('Social Menu')
     ]);
 
-	
 }
 add_action('after_setup_theme', "monk_setup");
 
@@ -83,6 +82,7 @@ function monk_enqueue_assets(){
     }
     
     // Global assets can be placed here...
+    wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.js');
     
 }
 add_action('wp_enqueue_scripts', 'monk_enqueue_assets');
@@ -147,7 +147,8 @@ add_theme_support( 'post-formats', array(
 /** DEFINE SUPPORT FOR MONK FEATURES **/
 
 // Add support for Bootstrap's Thumbnail Component to galleries
-add_theme_support( 'monk-bootstrap-gallery' );
+add_theme_support( 'bootstrap-gallery' );
+
 
 
 /**

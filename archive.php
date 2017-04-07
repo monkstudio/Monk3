@@ -13,7 +13,7 @@
 </header>
 <?php endif ?>
 
-<div class="container article-list" >
+<div class="container article-archive" >
     
     <?php function_exists('yoast_breadcrumb') && is_archive() && yoast_breadcrumb(); ?>
     

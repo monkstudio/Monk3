@@ -1,7 +1,7 @@
 {
     "main"  : [
         "js/modernizr.js",
-        "style.min.css",
-        "script.min.js"
+        "style.css",
+        "script.js"
     ]
 }

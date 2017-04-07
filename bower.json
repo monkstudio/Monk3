@@ -3,7 +3,6 @@
   "version": "3.0.0",
   "main": [
     "js/lib/email.js",
-    "js/modernizr.js",
     "style.css",
     "js/script.js"
   ],
@@ -26,11 +25,12 @@
     "bootstrap-sass": "*",
     "css-hamburgers": "*",
     "slick-carousel": "*",
-    "bourbon" : "*"
+    "slick-lightbox": "*"
   },
   "overrides": {
     "bootstrap-sass": {
       "main": [
+        "./assets/stylesheets/_bootstrap.scss",
         "./assets/javascripts/bootstrap/transition.js",
         "./assets/javascripts/bootstrap/dropdown.js"
       ]
